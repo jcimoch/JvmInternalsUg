@@ -31,8 +31,11 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <executable>maven</executable>
+                    <executable>java</executable>
                     <mainClass>pl.jcimoch.ug.OutOfMemoryErrorExample</mainClass>
+                    <commandlineArgs>
+                        -Xmx10M
+                    </commandlineArgs>
                 </configuration>
             </plugin>
         </plugins>

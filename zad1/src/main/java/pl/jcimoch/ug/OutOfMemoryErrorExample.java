@@ -18,6 +18,7 @@ public class OutOfMemoryErrorExample {
 
     public static void main(String[] args) {
 
+        System.out.println("Starting OutOfMemoryErrorExample ...");
         List<DummyData> dummyList = new ArrayList<DummyData>();
         while (true) {
             dummyList.add(new DummyData("dummyText"));
