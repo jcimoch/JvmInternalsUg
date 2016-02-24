@@ -13,5 +13,5 @@ która jest podzielona na dwie strefy
     - Heap - do przechowywania aktualnych zasobów
     - Permgen - do trzymania załadowanych klas
 
-* Przepełnienie pamięci podowuje wyczerpanie dostępnej strefy Heap poprzez
+* Przepełnienie pamięci powoduje wyczerpanie dostępnej strefy Heap poprzez
 nieskończone dorzucanie nowych obiektów do ArrayList nie dając tym samym możliwości zadziałania GC.
