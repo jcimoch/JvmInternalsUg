@@ -2,6 +2,12 @@
 
 ##Zad1
 
+How to run
+```java
+mvn clean install
+mvn exec:java
+```
+
 * Aplikacje javy przy starcie mają ustalony lecz ograniczony dostęp do pamięci,
 która jest podzielona na dwie strefy
     - Heap - do przechowywania aktualnych zasobów
