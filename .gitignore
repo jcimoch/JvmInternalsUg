@@ -71,3 +71,7 @@ crashlytics-build.properties
 hs_err_pid*
 
 node_modules
+
+#Do not ignore
+
+!/zad2/staticFilesServer/static/Dog.class
