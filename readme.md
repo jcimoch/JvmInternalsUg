@@ -15,3 +15,16 @@ która jest podzielona na dwie strefy
 
 * Przepełnienie pamięci powoduje wyczerpanie dostępnej strefy Heap poprzez
 nieskończone dorzucanie nowych obiektów do ArrayList nie dając tym samym możliwości zadziałania GC.
+
+##Zad2
+
+How to run
+
+```java
+mvn compile
+mvn exec:exec@runServer
+mvn exec:exec
+```
+* Statyczny serwer plików z przykładową klasą został wykonany w node.js.
+
+
