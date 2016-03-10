@@ -50,7 +50,7 @@ Dokonałem 10 niezależnych pomiarów z których wyciągnąłem średnią. Wykre
 
 Po nałożeniu nasię obu poprzednich wykresów widzimy efekt dynamicznej optymalizacji. W niektórych przypadkach czas się nieznacznie pogorszył jednak może to wynikać z faktu że wykresy pochodzą z obu różnych uruchomień programu. Możliwe też, że JIT nie dokonał poprawnej optymalizacji. 
 
-JIT Optymalization:
+JIT Optimalization:
 ![alt text](https://dl.dropboxusercontent.com/u/15067146/JITOptymalization.PNG "JIT Optymalization")
 
 
