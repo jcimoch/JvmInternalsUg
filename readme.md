@@ -58,7 +58,7 @@ JIT Optimalization:
 How to run:
 
 ```java
-mvn clean install
+mvn compile
 mvn test
 ```
 
