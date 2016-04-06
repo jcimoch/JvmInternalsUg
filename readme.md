@@ -64,3 +64,14 @@ mvn test
 
 Prosty konwerter obiektów POJO do formatu JSON. Konwerter obsuguje typy proste, tablice wielowymiarowe typów złożonych, oraz jednowymiarowe ArrayList'y. 
 
+##Zad 6
+
+How to run:
+```java
+mvn compile
+mvn exec:exec
+```
+
+Przykładowy program pokazujący, że SimpleDateFormat nie jest bezpieczny względem operacji wielowątkowych. Najprostszym rozwiązaniem problemu a zaraz chyba najszybszym (wydajnościowo) jest użycie zmiennej ThreadLocal, która spowoduje, że każdy powstały wątek będzie miał swoją instancje pożądanej klasy, tym samym nie doprowadzamy do synchronizacji i wszystkie wątki mogą działać równolegle. Wadą tego rozwiązania jest fakt, że bardzo często chcemy operować na jednej instacji w sposób wielowątkowy, wtedy instacja per wątek nie rozwiąże naszych problemów i najłatwiej a zarazm najmniej wydajnie będzie użyć synchronizacji.
+
+Do zarządzania wątkami użyłem java.util.concurrent.ExecutorService; oraz  java.util.concurrent.Executors;
