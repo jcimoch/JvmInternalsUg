@@ -53,4 +53,14 @@ Po nałożeniu nasię obu poprzednich wykresów widzimy efekt dynamicznej optyma
 JIT Optimalization:
 ![alt text](https://dl.dropboxusercontent.com/u/15067146/JITOptymalization.PNG "JIT Optymalization")
 
+##Zad 4
+
+How to run:
+
+```java
+mvn compile
+mvn test
+```
+
+Prosty konwerter obiektów POJO do formatu JSON. Konwerter obsuguje typy proste, tablice wielowymiarowe typów złożonych, oraz jednowymiarowe ArrayList'y. 
 

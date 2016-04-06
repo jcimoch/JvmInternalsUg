@@ -7,6 +7,6 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class Main {
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException {
-        System.out.println("Pleas run test: mvn tests");
+        System.out.println("Please run test: mvn test");
     }
 }
