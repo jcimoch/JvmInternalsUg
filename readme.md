@@ -78,7 +78,7 @@ Do zarządzania wątkami użyłem java.util.concurrent.ExecutorService; oraz  ja
 
 ##Zad 7
 
-W tym zadaniu do stworzenia prostego serwisu REST posłużyłem się frameworkiem http://sparkjava.com/download.html wzorowanym na express.js znanego z node.js
+W tym zadaniu do stworzenia prostego serwisu REST posłużyłem się frameworkiem http://sparkjava.com/download.html wzorowanym na express.js znanym z node.js
 
 How to run:
 ```java
