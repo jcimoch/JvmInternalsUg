@@ -101,6 +101,16 @@ Odpowiednie logi powinny się pojawić w konsoli.
 |    Java version     |    1.8.0_73                |
 
 
+Argumenty przekazywane dla każdego testu 
+```shell
+-Xms1024m -Xmx1024m -Xloggc:gc.log -XX:+PrintGCDateStamps -XX:+PrintGCApplicationStoppedTime
+```
+
+Każdy GC został przetestowany na 4 różnych niezależnych testach. Pierwsze 2 testy zawsze dotyczą sytuacji jednowątkowej. Koljne wielowątkowej. Alokacja statyczna oznacza stałą próbę rezerwacji pamięci wielkości 1Mb. Alokacja dynamiczna różni się losowym zakresem w granicach 1 - 99Mb. Mimo losowości, wiemy że średni rozkład będzie oscylował w połowie tych wartości, tym samym ilość przerwań jest większa a końcowa ilość alokacji mniejsza gdyż próbujemy rezerować duże obszary pamieci z dużą częstotliwością. Ilość przerwań oraz ich czas został przygotowany na podstawie logów ręczną metodą z pomocą edytora. 
+
+### Wnioski 
+Ciężko zaobserwować szczególne różnice pomiędzy zastosowanymi algorytami na tak prostym teście, jednak możemy wyróżnić  G1GC oraz ParallelOldGC, które charakteryzują się najmniejszą sumaryczną ilością przerwań programu. G1GC zdecydowanie gorzej radzi sobie gdy używany jest intensywnie tylko jeden wątek. Jego przewaga pojawia się przy maksymalnym wykorzystaniu wielu wątków jednocześnie. 
+
 | GC Type         |Thread Count|Time |Allocation Count | Allocation Type |Intervals Count | Intervals Total Time - ms | 
 |-----------------|--------------|------|------------------|-----------------|-----------------|---------------------------| 
 | SerialGC        | 1            | 60s  | 1125735          | static          | 4139            | 1.2403030000000022        | 
