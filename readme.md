@@ -88,7 +88,7 @@ mvn exec:exec
 ```
 
 Wchodzimy na http://localhost:4567/hello/100
-zmieniajać końcowy parametr wpływamy na długość uśpienia wątku. 
+zmieniając końcowy parametr wpływamy na długość uśpienia wątku.
 Odpowiednie logi powinny się pojawić w konsoli. 
 
 ##Zad 9
@@ -106,10 +106,19 @@ Argumenty przekazywane dla każdego testu
 -Xms1024m -Xmx1024m -Xloggc:gc.log -XX:+PrintGCDateStamps -XX:+PrintGCApplicationStoppedTime
 ```
 
-Każdy GC został przetestowany na 4 różnych niezależnych testach. Pierwsze 2 testy zawsze dotyczą sytuacji jednowątkowej. Koljne wielowątkowej. Alokacja statyczna oznacza stałą próbę rezerwacji pamięci wielkości 1Mb. Alokacja dynamiczna różni się losowym zakresem w granicach 1 - 99Mb. Mimo losowości, wiemy że średni rozkład będzie oscylował w połowie tych wartości, tym samym ilość przerwań jest większa a końcowa ilość alokacji mniejsza gdyż próbujemy rezerować duże obszary pamieci z dużą częstotliwością. Ilość przerwań oraz ich czas został przygotowany na podstawie logów ręczną metodą z pomocą edytora. 
+Każdy GC został przetestowany na 4 różnych niezależnych testach.
+Pierwsze 2 testy zawsze dotyczą sytuacji jednowątkowej. Kolejne wielowątkowej.
+Alokacja statyczna oznacza stałą próbę rezerwacji pamięci wielkości 1Mb.
+Alokacja dynamiczna różni się losowym zakresem w granicach 1 - 99Mb.
+Mimo losowości, wiemy że średni rozkład będzie oscylował w połowie tych wartości, tym samym ilość przerwań jest
+większa a końcowa ilość alokacji mniejsza gdyż próbujemy rezerować duże obszary pamieci z dużą częstotliwością.
+Ilość przerwań oraz ich czas został przygotowany na podstawie logów ręczną metodą z pomocą edytora.
 
 ### Wnioski 
-Ciężko zaobserwować szczególne różnice pomiędzy zastosowanymi algorytami na tak prostym teście, jednak możemy wyróżnić  G1GC oraz ParallelOldGC, które charakteryzują się najmniejszą sumaryczną ilością przerwań programu. G1GC zdecydowanie gorzej radzi sobie gdy używany jest intensywnie tylko jeden wątek. Jego przewaga pojawia się przy maksymalnym wykorzystaniu wielu wątków jednocześnie. 
+Ciężko zaobserwować szczególne różnice pomiędzy zastosowanymi algorytami na tak prostym teście,
+jednak możemy wyróżnić  G1GC oraz ParallelOldGC, które charakteryzują się najmniejszą sumaryczną ilością przerwań programu.
+G1GC zdecydowanie gorzej radzi sobie gdy używany jest intensywnie tylko jeden wątek.
+Jego przewaga pojawia się przy maksymalnym wykorzystaniu wielu wątków jednocześnie.
 
 | GC Type         |Thread Count|Time |Allocation Count | Allocation Type |Intervals Count | Intervals Total Time - ms | 
 |-----------------|--------------|------|------------------|-----------------|-----------------|---------------------------| 
