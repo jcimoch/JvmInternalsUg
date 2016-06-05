@@ -147,3 +147,13 @@ Jego przewaga pojawia się przy maksymalnym wykorzystaniu wielu wątków jednocz
 | G1GC            | 1            | 60s  | 14680            | dynamic         | 2156            | 15.725686399999983        | 
 | G1GC            | 8            | 60s  | 596374           | static          | 4700            | 27.4719264                | 
 | G1GC            | 8            | 60s  | 13628            | dynamic         | 2465            | 30.364052000000058        | 
+
+##Zad 11
+
+Uwaga: Dane testowe są generowane bez zachowania ich poprawności (np. imię 0abc)
+
+How to run:
+```java
+mvn test
+```
+
